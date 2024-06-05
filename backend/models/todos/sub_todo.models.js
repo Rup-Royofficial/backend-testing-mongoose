@@ -10,10 +10,10 @@ const subtodoSchema = new mongoose.Schema(
             type: Boolean,
             default: false
         },
-        createdBy: {
+        createdBy: { // form of referencing a model created somewhere else, within hte models 
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
         }
     },{timestamps: true})
 
-export const SubTodo = mongoose.model('SubTodo', subtodoSchema)
+export const SubTodo = mongoose.model('SubTodo', subtodoSchema)// the Name by which the model is going to be referenced & the schema it belongs to, are parameters 
