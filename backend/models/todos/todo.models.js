@@ -14,7 +14,7 @@ const todoSchema = new mongoose.Schema(
             type: mongoose.Schema.Types.ObjectId,
             ref: "User"
         }, 
-        subTodos: [
+        subTodos: [ // Either u can create the objects within the array or create a separate schema for the object and refer it here
             {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "SubTodo"
